@@ -6,7 +6,7 @@ const app = express()
 app.set("port", process.env.PORT || 3005)
 
 app.get("/", (_, res) => {
-    res.send("Welcome to CRON server!!");
+    res.send("Welcome to CRON server!! 😬");
 });
 
 const job = new CronJob(
