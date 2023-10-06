@@ -1,9 +1,8 @@
 const express = require("express");
 const CronJob = require('cron').CronJob;
 
-
 const app = express()
-app.set("port", process.env.PORT || 3005)
+const port = process.env.PORT || 3005
 
 app.get("/", (_, res) => {
     res.send("Welcome to CRON server!! 😬");
@@ -19,8 +18,8 @@ const job = new CronJob(
 	'America/Los_Angeles'
 );
 
-app.listen(app.get("port"), () => {
-    console.log("Express server listening on port " + app.get("port"));
+app.listen(port, () => {
+  console.log("Express server listening on port " + port);
 });
 
 module.exports = app;
